@@ -17,6 +17,8 @@ body {
 }
 img {
     display: block;
+    width: 100%;
+    height: auto;
 }
 ul {
     list-style-type: none;
@@ -37,8 +39,15 @@ ul {
 
 /* ----------HEADER--------------- */
 
+.header {
+    border: 1px solid #ECECEC;
+}
 .logo-container {
     display: flex;
+}
+.header-nav {
+    display: flex;
+    align-items: center;
 }
 .header-logo {
     padding-top: 24px;
@@ -59,14 +68,14 @@ color: #000000
 .header-menu-list {
     display: flex;
     align-items: center;
-    margin-top: 32px;
 }
-.header-menu-item:not (:last-child) {
+
+
+.header-menu-item:not(:last-child) {
     margin-right: 50px;
 }
 
 .header-link {
-    padding-right: 50px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -104,17 +113,16 @@ color: #000000
 
 /* -------------HERO-------------  */
 
-.top-container {
-    padding: 200px;
-}
 .hero {
     background-color: #2F303A;
-    margin-bottom: 94px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 .hero-title {
     display: block;
     margin: 0 auto;
     max-width: 696px;
+    margin-bottom: 30px;
     
     font-weight: 900;
     font-size: 44px;
@@ -129,8 +137,8 @@ color: #000000
     box-sizing: border-box;
     padding: 10px 32px;
     border-width: 0; 
-    margin: 30px auto 0;
-      
+    margin: auto;
+    
     cursor: pointer;
     font-family: inherit;
     font-style: normal;
@@ -156,7 +164,7 @@ color: #000000
     justify-content: space-between;
 }
 .benefits-title {
-    padding-bottom: 10px;
+    margin-bottom: 10px;
 
     font-weight: 700;
     font-size: 14px;
@@ -176,9 +184,11 @@ color: #000000
 }
 
 /* ------------ABOUT-------------  */
-
+.about {
+    padding-bottom: 94px;
+}
 .about-title {
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 
     font-weight: 700;
     font-size: 36px;
@@ -188,22 +198,27 @@ color: #000000
     color: var(--first--title-color)
 }
 .about-list {
-    margin-bottom: 94px;
     display: flex;
     justify-content: space-between;
 }
 
 /* ------------TEAM--------------  */
 
-.team-list {
+.team {
+    background-color: #F5F4FA;
+    padding-top: 94px;
     padding-bottom: 94px;
+}
+.team-list {
     display: flex;
-    justify-content: space-between;
+    gap: 30px;
+}
+.team-list-info {
+    border-radius: 0px 0px 4px 4px;
+    background-color: #FFFFFF;
 }
 .team-title {
-    padding-top: 94px;
-    padding-bottom: 50px;
-
+    margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -213,7 +228,7 @@ color: #000000
 }
 .team-list-name {
     padding-top: 30px;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -222,6 +237,7 @@ color: #000000
     color: #212121;
 }
 .team-list-item {
+    padding-bottom: 30px;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -231,16 +247,21 @@ color: #000000
 }
 
 /* ------------ALBUM-------------  */
-
+.album {
+    padding-top: 94px;
+    padding-bottom: 34px;
+}
 .album-list {
-    margin-top: 94px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     gap: 8px;
 }
 .btn {
     padding: 6px 22px;
+    border: transparent;
+    border-radius: 4px;
+    
     cursor: pointer;
     font-family: inherit;
     font-style: normal;
@@ -257,11 +278,10 @@ color: #000000
     color: #FFFFFF;
 }
 .album-foto-list {
-   padding-bottom: 94px;
-   padding-top: 34px;
+  
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-between;
+   gap: 30px;
 }
 .album-foto-item {
     
@@ -272,9 +292,11 @@ color: #000000
     border-top: 0;
 }
 .album-foto-name {
+    margin-bottom: 4px;
+    
     font-weight: 700;
     font-size: 18px;
-    line-height: 2
+    line-height: 2;
     letter-spacing: 0.06em;
     color: #212121;
 }
@@ -288,10 +310,9 @@ color: #000000
 
 /* ------------ADDRESS--------------  */
 
-.footer-container {
-    padding-top: 60px;
-}
 .footer-logo {
+    display: block;
+    margin-bottom: 20px;
     font-family: 'Raleway', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -302,15 +323,15 @@ color: #000000
     text-decoration: none;
 }
 .end {
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: #2F303A
 }
 .contacts-address-list {
-    padding-top: 20px;
-    padding-bottom: 60px;
     font-style: normal;
 }
-.contact-address-item {
-    padding-bottom: 9px;
+.contacts-address-item:not(:last-child) {
+    margin-bottom: 9px;
 }
 .contacts-address-map:hover {
     color: #2196F3;
@@ -365,4 +386,5 @@ color: #000000
 }
 .footer-logoColor {
     color: #FFFFFF;
+    
 }
